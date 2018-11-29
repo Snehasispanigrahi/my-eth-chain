@@ -1,0 +1,26 @@
+geth --datadir ./myDataDir/  init ./myGenesis.json
+geth --datadir ./myDataDir --rpc --rpcport 8545 --rpcaddr 127.0.0.1 --rpccorsdomain "*"  --networkid 1114 --port 30303 console 2>> myEth.log
+personal.newAccount("node1")    0x4c218aeff75aad7198bbd54aa3006cff39bbc5e5
+eth.coinbase
+miner.setEtherbase(web3.eth.accounts[0])
+eth.getBalance(eth.coinbase)
+miner.start()
+miner.stop()
+
+geth --datadir ./peer2DataDir init ./myGenesis.json
+geth --datadir ./peer2DataDir --networkid 1114 --port 30304 console 2>> myEth2.log
+geth --datadir ./peer2DataDir --rpc --rpcport 8546 --rpcaddr 127.0.0.1 --rpccorsdomain "*"  --networkid 1114 --port 30304 console 2>> myEth2.log
+
+//node1 enode
+admin.nodeInfo.enode
+enode://fcc0d9f61eaf4c612d4db0296960eb0d69dafeb30c08127d2f55c1ff1c369e75f2b538df58c88f25a96e86c5602ca9033a4f830b424642bca76bde17e96e1242@106.51.18.39:30303?discport=25870
+
+admin.addPeer(“enode://fcc0d9f61eaf4c612d4db0296960eb0d69dafeb30c08127d2f55c1ff1c369e75f2b538df58c88f25a96e86c5602ca9033a4f830b424642bca76bde17e96e1242@106.51.18.39:30303?discport=25870")
+personal.newAccount("node2")    0x3cb4666158b04f605f14a97a7409814c18122f4f
+admin.addPeer(“enode://fcc0d9f61eaf4c612d4db0296960eb0d69dafeb30c08127d2f55c1ff1c369e75f2b538df58c88f25a96e86c5602ca9033a4f830b424642bca76bde17e96e1242@127.0.0.1:30303")
+
+npm install web3@1.0.0-beta.26
+
+web3.personal.unlockAccount(web3.eth.accounts[0], "node2")
+
+web3.eth.getCode("0x8f887c198b91a4e73375f1b9596e9ec5e24d5087")
