@@ -1,7 +1,7 @@
 const Web3 = require("web3");
 const { interface, bytecode } = require("./compile");
 
-const web3 = new Web3(new Web3.providers.HttpProvider("http://localhost:8546"));
+const web3 = new Web3(new Web3.providers.HttpProvider("http://localhost:8545"));
 
 const deploy = async () => {
   const accounts = await web3.eth.accounts;
@@ -16,9 +16,15 @@ const deploy = async () => {
       gas: 1000000
     },
     function(err, deployedContract) {
-      if (deployedContract.address) {
-        console.log(`Address: ${deployedContract.address}`);
-        // use deployedContract here
+      if (!err) {
+        if (!deployedContract.address) {
+          console.log(deployedContract.transactionHash);
+        } else {
+          console.log(`Address: ${deployedContract.address}`);
+          // use deployedContract here
+        }
+      } else {
+        console.log('error: '+err);
       }
     }
   );

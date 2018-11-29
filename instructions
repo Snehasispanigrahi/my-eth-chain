@@ -24,3 +24,9 @@ npm install web3@1.0.0-beta.26
 web3.personal.unlockAccount(web3.eth.accounts[0], "node2")
 
 web3.eth.getCode("0x8f887c198b91a4e73375f1b9596e9ec5e24d5087")
+0x3cb4666158b04f605f14a97a7409814c18122f4f
+web3.eth.getCode("0x3cb4666158b04f605f14a97a7409814c18122f4f")
+
+geth --datadir ./peer2DataDir --rpc --rpcport 8545 --rpcaddr 127.0.0.1 --rpccorsdomain "http://127.0.0.1:8080"  --networkid 1114 --port 30303 console 2>> myEth.log
+
+contractInstance = VotingContract.at(deployedContract.address)

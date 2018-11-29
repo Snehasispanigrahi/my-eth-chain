@@ -29,3 +29,33 @@ miner.stop()
 eth.getBalance(eth.coinbase)
 geth --datadir ./peer2DataDir --rpc --rpcport 8545 --rpcaddr 127.0.0.1-rpccorsdomain "*"  --networkid 1114 --port 30303 console 2>> myEth.log
 admin.nodeInfo.enode
+admin.addPeer("enode://fcc0d9f61eaf4c612d4db0296960eb0d69dafeb30c08127d2f55c1ff1c369e75f2b538df58c88f25a96e86c5602ca9033a4f830b424642bca76bde17e96e1242@10.242.27.121:30304")
+admin.peers
+web3.eth.getCode("0x3cb4666158b04f605f14a97a7409814c18122f4f")
+eth.coinbase
+admin.peers
+admin.addPeer("enode://fcc0d9f61eaf4c612d4db0296960eb0d69dafeb30c08127d2f55c1ff1c369e75f2b538df58c88f25a96e86c5602ca9033a4f830b424642bca76bde17e96e1242@10.242.27.121:30304")
+admin.peers
+web3 --version
+web3.version
+npm uninstall web3
+admin.addPeer("enode://fcc0d9f61eaf4c612d4db0296960eb0d69dafeb30c08127d2f55c1ff1c369e75f2b538df58c88f25a96e86c5602ca9033a4f830b424642bca76bde17e96e1242@10.242.27.121:30304")
+admin.peers
+web3.version
+admin.addPeer("enode://fcc0d9f61eaf4c612d4db0296960eb0d69dafeb30c08127d2f55c1ff1c369e75f2b538df58c88f25a96e86c5602ca9033a4f830b424642bca76bde17e96e1242@10.242.27.121:30304")
+admin.peers
+admin.addPeer("enode://fcc0d9f61eaf4c612d4db0296960eb0d69dafeb30c08127d2f55c1ff1c369e75f2b538df58c88f25a96e86c5602ca9033a4f830b424642bca76bde17e96e1242@10.242.27.121:30304")
+admin.peers
+admin.addPeer("enode://fcc0d9f61eaf4c612d4db0296960eb0d69dafeb30c08127d2f55c1ff1c369e75f2b538df58c88f25a96e86c5602ca9033a4f830b424642bca76bde17e96e1242@10.242.27.121:30304")
+admin.peers
+admin.addPeer("enode://fcc0d9f61eaf4c612d4db0296960eb0d69dafeb30c08127d2f55c1ff1c369e75f2b538df58c88f25a96e86c5602ca9033a4f830b424642bca76bde17e96e1242@10.242.27.121:30304")
+admin.peers
+admin.addPeer("enode://fcc0d9f61eaf4c612d4db0296960eb0d69dafeb30c08127d2f55c1ff1c369e75f2b538df58c88f25a96e86c5602ca9033a4f830b424642bca76bde17e96e1242@10.242.27.121:30304")
+miner.start()
+miner.stop()
+admin.addPeer("enode://fcc0d9f61eaf4c612d4db0296960eb0d69dafeb30c08127d2f55c1ff1c369e75f2b538df58c88f25a96e86c5602ca9033a4f830b424642bca76bde17e96e1242@10.242.27.121:30304")
+admin.peers
+admin.addPeer("enode://fcc0d9f61eaf4c612d4db0296960eb0d69dafeb30c08127d2f55c1ff1c369e75f2b538df58c88f25a96e86c5602ca9033a4f830b424642bca76bde17e96e1242@10.242.27.121:30304")
+admin.peers
+miner.start()
+contractInstance.totalVotesFor.call('Rama')
