@@ -1,6 +1,6 @@
 geth --datadir ./myDataDir/  init ./myGenesis.json
 geth --datadir ./myDataDir --rpc --rpcport 8545 --rpcaddr 127.0.0.1 --rpccorsdomain "*"  --networkid 1114 --port 30303 console 2>> myEth.log
-personal.newAccount("node1")    0x4c218aeff75aad7198bbd54aa3006cff39bbc5e5
+personal.newAccount("node1")    0x9ff0bd2812ed8059eac84a972427a76252997596
 eth.coinbase
 miner.setEtherbase(web3.eth.accounts[0])
 eth.getBalance(eth.coinbase)
